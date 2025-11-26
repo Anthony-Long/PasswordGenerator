@@ -7,13 +7,8 @@ let sliderValue = passwordLengthSlider.value;
 
 passwordLengthSlider.addEventListener('input', function(event) {
     sliderValue = event.target.value
-    console.log(sliderValue)
     document.getElementById('pw-length-span').textContent = sliderValue
 })
-
-setTimeout(function() {
-    console.log(sliderValue)
-},2000)
 
 passwordGenerateBtn.addEventListener('click', function() {
     let password1 = returnPassword(characters, sliderValue)
@@ -34,5 +29,3 @@ function returnPassword(chars, count) {
     }
     return password
 }
-
-console.log(returnPassword(characters, 15))

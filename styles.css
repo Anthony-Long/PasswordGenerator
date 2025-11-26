@@ -98,6 +98,10 @@ span {
 }
 
 @media (max-width: 1000px) {
+  body {
+    font-size: 1rem;
+  }
+
   .container {
     height: auto;
   }
