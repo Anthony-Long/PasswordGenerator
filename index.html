@@ -22,7 +22,19 @@
         <button class="btn-style" id="password-generate-btn">
           Generate Passwords
         </button>
-
+        <div class="slidecontainer">
+          <label for="password-length"
+            >Password Length: <span id="pw-length-span">12</span></label
+          >
+          <input
+            type="range"
+            min="8"
+            max="25"
+            value="12"
+            class="slider"
+            id="password-length-slider"
+          />
+        </div>
         <hr />
         <div class="pw-container">
           <div class="pw-results" id="result1">Generate a Password!</div>

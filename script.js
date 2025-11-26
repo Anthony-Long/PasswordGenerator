@@ -2,15 +2,27 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 "/"];
 
 const passwordGenerateBtn = document.getElementById('password-generate-btn')
+const passwordLengthSlider = document.getElementById('password-length-slider')
+let sliderValue = passwordLengthSlider.value;
 
+passwordLengthSlider.addEventListener('input', function(event) {
+    sliderValue = event.target.value
+    console.log(sliderValue)
+    document.getElementById('pw-length-span').textContent = sliderValue
+})
+
+setTimeout(function() {
+    console.log(sliderValue)
+},2000)
 
 passwordGenerateBtn.addEventListener('click', function() {
-    let password1 = returnPassword(characters, 15)
-    let password2 = returnPassword(characters, 15)
+    let password1 = returnPassword(characters, sliderValue)
+    let password2 = returnPassword(characters, sliderValue)
     document.getElementById('result1').textContent = password1
     document.getElementById('result2').textContent = password2
    
 })
+
 
 
 function returnPassword(chars, count) {

@@ -93,6 +93,10 @@ hr {
   font-family: "Inter", "arial", "sans-serif";
 }
 
+span {
+  display: inline;
+}
+
 @media (max-width: 1000px) {
   .container {
     height: auto;
